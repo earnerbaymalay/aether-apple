@@ -1,28 +1,31 @@
 <div align="center">
 
 # 🌌 A E T H E R — A P P L E &nbsp; E D I T I O N
-
 ### *Free. Offline. Private. AI on Every Apple Device.*
 
-[![Status](https://img.shields.io/badge/Status-v2.0_Multi_Platform-50fa7b?style=for-the-badge)]()
-[![Engine](https://img.shields.io/badge/Engine-Llama.cpp_%7C_Python-81a1c1?style=for-the-badge&logo=c%2B%2B)]()
-[![Platform](https://img.shields.io/badge/Platform-macOS_%7C_iPad-4c566a?style=for-the-badge&logo=apple)]()
-[![License](https://img.shields.io/badge/License-MIT-f1fa8c?style=for-the-badge)]()
-[![Privacy](https://img.shields.io/badge/Privacy-100%25_Local_Offline-bd93f9?style=for-the-badge)]()
+[![Status](https://img.shields.io/badge/Status-v2.0_Multi_Platform-50fa7b?style=for-the-badge)](https://github.com/earnerbaymalay/aether-apple)
+[![Engine](https://img.shields.io/badge/Engine-Llama.cpp_%7C_Python-81a1c1?style=for-the-badge&logo=c%2B%2B)](https://github.com/ggerganov/llama.cpp)
+[![Platform](https://img.shields.io/badge/Platform-macOS_%7C_iPad-4c566a?style=for-the-badge&logo=apple)](https://github.com/earnerbaymalay/aether-apple)
+[![License](https://img.shields.io/badge/License-MIT-f1fa8c?style=for-the-badge)](LICENSE)
+[![Privacy](https://img.shields.io/badge/Privacy-100%25_Local_Offline-bd93f9?style=for-the-badge)](#-why-does-this-exist)
 
-[**⚡ Quick Start**](#-get-started-in-60-seconds) • [**📖 Full Guide**](USAGE.md) • [**🤖 Android Version**](https://github.com/earnerbaymalay/aether)
+[**⚡ Quick Start**](#-get-started-in-60-seconds) · [**📖 Full Guide**](USAGE.md) · [**🤖 Android Version**](https://github.com/earnerbaymalay/aether)
+
+</div>
 
 ---
 
-### 🤔 What is this?
+## 🧬 The Mission
 
-This is **local AI for Apple devices** — the same free, private, offline AI as [Aether-AI for Android](https://github.com/earnerbaymalay/aether), now running on your Mac **and** your iPad.
+This is the **Apple Edition** of [Aether-AI](https://github.com/earnerbaymalay/aether) — the same philosophy of **100% local, private, offline AI**, adapted for macOS and iPad.
 
-No subscriptions. No API keys. No internet required. No data leaving your device.
+Your Mac runs the AI. Your Mac owns the AI. No servers. No API keys. No subscriptions.
 
-> **Your Apple device is more capable than you think.** Aether proves it.
+> **Coming from the Android version?** This is a simplified sibling — single model, macOS-native tools, same local-first ethos.
 
-### 🔥 Why does this exist?
+---
+
+## 🔥 Why Does This Exist?
 
 Because **everyone deserves free AI** — not just people with $20/month subscriptions and fast internet.
 
@@ -36,7 +39,7 @@ Because **everyone deserves free AI** — not just people with $20/month subscri
 
 ---
 
-### 🍎 Three Ways to Run Aether on Apple
+## 👋 Three Ways to Run Aether on Apple
 
 Aether adapts to your device. Here's what each experience looks like:
 
@@ -44,24 +47,16 @@ Aether adapts to your device. Here's what each experience looks like:
 |---|---|---|---|
 | **What is it?** | Native macOS terminal | Free Linux emulator app from App Store | Free sandboxed terminal app |
 | **AI Engine** | llama.cpp (Homebrew) | llama.cpp (built from source) | Python (llama-cpp-python) |
-| **Speed** | ⚡⚡⚡ 15-50 t/s on Apple Silicon | ⚡ 3-8 t/s (x86 emulation) | ⚡⚡ 5-15 t/s if llama-cpp-python installed |
-| **Models** | 2 modes (CHAT + TURBO) | 2 modes (same models) | 2 modes (same models) |
-| **Toolbox** | 6 tools (battery, disk, files, web, etc.) | 5 tools (no battery — sandboxed) | 5 tools (no battery — sandboxed) |
-| **Knowledge Vault** | ✅ Context7 persistent memory | ✅ Same Markdown vault | ✅ Same Markdown vault |
+| **Speed** | ⚡⚡⚡ 15-50 t/s on Apple Silicon | ⚡ 3-8 t/s (x86 emulation) | ⚡⚡ 5-15 t/s if installed |
+| **Models** | 2 modes (CHAT / TURBO) | 2 modes (same models) | 2 modes (same models) |
+| **Toolbox** | 6 tools (macOS native) | 5 tools (no battery — sandboxed) | 5 tools (no battery — sandboxed) |
+| **Context7** | ✅ Persistent memory | ✅ Persistent memory | ✅ Persistent memory |
 | **Setup Time** | ~5 minutes | ~20 minutes (build time) | ~5 minutes |
 | **Get it from** | Terminal + Homebrew | [iSH on App Store](https://apps.apple.com/app/ish-shell/id1436902243) | [a-Shell on App Store](https://apps.apple.com/app/a-shell/id1473805438) |
 
 > **💡 Bottom line:** Every Apple device can run local AI. The experience scales with the platform, but **the philosophy is the same — free, private, offline.**
 
-### 📸 What It Looks Like
-
-<p align="center">
-  <img src="docs/media/apple-screenshot.svg" alt="Aether Apple on Mac and iPad" width="600"/>
-</p>
-
 ---
-
-</div>
 
 ## 🚀 Get Started in 60 Seconds
 
@@ -127,20 +122,25 @@ cd aether-apple
    └────────────────────────────────────────────┘
 ```
 
-The menu **auto-detects** your platform and shows the right options. If llama.cpp isn't available, it gracefully falls back to Python-based inference.
+### Two Modes:
 
-### Toolbox (platform-aware)
-
-| Tool | macOS | iSH | a-Shell |
+| Mode | Model | Speed | Best For |
 |---|---|---|---|
-| 📅 Date/Time | ✅ Real | ✅ Real | ✅ Real |
-| 🔋 Battery | ✅ Real (`pmset`) | ⚠️ "Check Control Center" | ⚠️ "Check Control Center" |
-| 💾 Disk Usage | ✅ Real | ✅ Real | ✅ Real |
-| 📁 List Files | ✅ Real | ✅ Real | ✅ Real |
-| 🔍 Web Search | ✅ DuckDuckGo URL | ✅ DuckDuckGo URL | ✅ DuckDuckGo URL |
-| 🖥️  System Info | ✅ Full details | ✅ iSH/Alpine details | ✅ iPad details |
-| 🧠 Knowledge Vault | ✅ | ✅ | ✅ |
-| 🧹 Purge Memory | ✅ | ✅ | ✅ |
+| 🤖 **CHAT** | Llama-3.2-3B | ~20 t/s on M1 | General questions, writing, analysis |
+| ⚡ **TURBO** | Qwen-Coder-3B | ~22 t/s on M1 | Code, technical tasks, debugging |
+
+### Toolbox (platform-aware):
+
+| Tool | macOS | iPad |
+|---|---|---|
+| 📅 Date/Time | ✅ Real | ✅ Real |
+| 🔋 Battery | ✅ Real (`pmset`) | ⚠️ "Check Control Center" |
+| 💾 Disk Usage | ✅ Real | ✅ Real |
+| 📁 List Files | ✅ Real | ✅ Real |
+| 🔍 Web Search | ✅ DuckDuckGo URL | ✅ DuckDuckGo URL |
+| 🖥️ System Info | ✅ Full details | ✅ Platform details |
+| 🧠 Knowledge Vault | ✅ | ✅ |
+| 🧹 Purge Memory | ✅ | ✅ |
 
 ### Context7 Persistent Memory — Works Everywhere
 
@@ -154,22 +154,17 @@ Same as the Android version. Your AI's knowledge is stored as **plain Markdown f
 
 ## 💡 "What Can I Actually Do With This on My iPad?"
 
-Great question. Here are real scenarios:
-
 | Scenario | How It Works |
 |---|---|
-| 📝 **Study on the train** | Open CHAT → "Explain quantum entanglement" → get a detailed answer. No wifi needed. |
-| 💻 **Code review on iPad** | TURBO mode → paste your code → get suggestions. Works great on iPad Pro with keyboard. |
+| 📝 **Study on the train** | Open CHAT → "Explain quantum entanglement" → get a detailed answer. No wifi. |
+| 💻 **Code review on iPad** | TURBO mode → paste your code → get suggestions. Works great with keyboard. |
 | 📚 **Research offline** | Ask the AI anything — it has the training data baked in. No internet = no problem. |
 | 🧠 **Build personal knowledge** | "Learn this: Python decorator pattern" → saved forever. Next session, it remembers. |
 | ✍️ **Writing assistant** | "Help me write a cover letter" → it drafts. "Make it more professional" → it revises. |
-| 🔧 **System info** | TOOLS → System Info → see your device details, disk space, date/time. |
-| 🌐 **Quick web lookup** | When you *do* have wifi: TOOLS → Web Search → get a DuckDuckGo URL. |
-| 📊 **Benchmark** | See how fast your device runs AI. Compare M1 vs M2 vs iSH. |
 
 ---
 
-## 📂 Project Structure
+## 🏗️ Architecture at a Glance
 
 ```
 aether-apple/
@@ -189,6 +184,22 @@ aether-apple/
 ├── scripts/               ← Platform-specific scripts
 └── models/                ← Downloaded .gguf files (gitignored)
 ```
+
+---
+
+## 📲 All Apps, One Place
+
+All our apps are available through **[Sideload](https://earnerbaymalay.github.io/sideload/)** — our central distribution hub for local-first apps. One tap to install on any device.
+
+| | 📱 Android (Flagship) | 🖥️ Mac (Full) | 📱 iPad (iSH) | 📱 iPad (a-Shell) |
+|---|---|---|---|---|
+| **AI Models** | 4 tiers | 2 modes | 2 modes | 2 modes |
+| **Tools** | 10+ (Termux:API) | 6 (macOS native) | 5 | 5 |
+| **Advanced** | Swarm, Sentinel, Agent | Chat + Toolbox | Chat + Toolbox | Chat + Toolbox |
+| **Price** | Free | Free | Free | Free |
+| **Privacy** | 100% local | 100% local | 100% local | 100% local |
+
+> **One philosophy across every device.** The Android version is the full-power experience. The Apple edition covers Mac (full), iPad via iSH (medium), and iPad via a-Shell (lite). **Use them together — they share the same knowledge format.**
 
 ---
 
@@ -215,27 +226,19 @@ aether-apple/
 
 ---
 
-## 🤝 Relationship to Android Version
+## 🤝 Contributing
 
-This is a **sibling project** to the main [Aether-AI](https://github.com/earnerbaymalay/aether) repository.
+Aether is built by people who believe AI should be **free, private, and local**. Whether you're a developer, writer, or just someone with a cool idea — you're welcome here.
 
-| | 📱 Android (Termux) | 🖥️ Mac (Full) | 📱 iPad (iSH) | 📱 iPad (a-Shell) |
-|---|---|---|---|---|
-| **Repo** | [aether](https://github.com/earnerbaymalay/aether) | [aether-apple](https://github.com/earnerbaymalay/aether-apple) | Same | Same |
-| **Models** | 4 tiers | 2 modes | 2 modes | 2 modes |
-| **Tools** | 10+ (Termux:API) | 6 (macOS native) | 5 (no battery) | 5 (no battery) |
-| **Advanced** | Swarm, Sentinel, Agent | Chat + Toolbox | Chat + Toolbox | Chat + Toolbox |
-| **Knowledge** | ✅ Context7 | ✅ Context7 | ✅ Context7 | ✅ Context7 |
-| **Price** | Free | Free | Free | Free |
-| **Privacy** | 100% local | 100% local | 100% local | 100% local |
-
-> **🌌 One philosophy. Every device. Free, private, offline AI for everyone.**
+- 🐛 Found a bug? [Open an issue](https://github.com/earnerbaymalay/aether-apple/issues)
+- 💡 Have an idea? [Start a discussion](https://github.com/earnerbaymalay/aether-apple/discussions)
+- 🔧 Want to code? Fork the repo and submit a PR!
 
 ---
 
 ## 📜 License
 
-[MIT License](LICENSE) — Use it. Modify it. Share it. No restrictions.
+[MIT License](LICENSE) — Use it. Modify it. Share it.
 
 ---
 
@@ -243,7 +246,7 @@ This is a **sibling project** to the main [Aether-AI](https://github.com/earnerb
 
 ### 🌌 *Develop natively. Think locally. Evolve autonomously.*
 
-**⭐ Star this repo if you believe AI should be free, private, and available to everyone.**
+**⭐ Star this repo if you believe AI should be free and private.**
 
 [**📱 Get the Android Version →**](https://github.com/earnerbaymalay/aether)
 
