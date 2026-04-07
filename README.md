@@ -53,6 +53,12 @@ Aether adapts to your device. Here's what each experience looks like:
 
 > **💡 Bottom line:** Every Apple device can run local AI. The experience scales with the platform, but **the philosophy is the same — free, private, offline.**
 
+### 📸 What It Looks Like
+
+<p align="center">
+  <img src="docs/media/apple-screenshot.svg" alt="Aether Apple on Mac and iPad" width="600"/>
+</p>
+
 ---
 
 </div>
