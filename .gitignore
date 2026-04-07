@@ -1,0 +1,6 @@
+# Aether Apple Edition — .gitignore
+models/
+__pycache__/
+*.pyc
+*.gguf
+.aether/
