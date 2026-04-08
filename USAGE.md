@@ -11,7 +11,7 @@
 2. [Your First AI Conversation](#2-your-first-ai-conversation)
 3. [Understanding the Two Modes](#3-understanding-the-two-modes)
 4. [Using the Toolbox](#4-using-the-toolbox)
-5. [Persistent Memory — Context7 Vault](#5-persistent-memory--context7-vault)
+5. [Persistent Memory — AetherVault Vault](#5-persistent-memory--context7-vault)
 6. [Platform-Specific Tips](#6-platform-specific-tips)
 7. [Troubleshooting](#7-troubleshooting)
 8. [FAQ](#8-faq)
@@ -146,7 +146,7 @@ From the main menu, select **3) TOOLS**:
 
 ---
 
-## 5. Persistent Memory — Context7 Vault
+## 5. Persistent Memory — AetherVault Vault
 
 > **This is what makes Aether fundamentally different from every cloud AI.**
 
@@ -154,7 +154,7 @@ ChatGPT, Claude, Gemini — they all forget everything when you close the sessio
 
 ### How it works:
 
-Knowledge is stored as **Markdown files** in `knowledge/context7/`. The AI reads these files every time you start a chat.
+Knowledge is stored as **Markdown files** in `knowledge/aethervault/`. The AI reads these files every time you start a chat.
 
 **Teaching the AI:**
 ```bash
@@ -162,16 +162,16 @@ Knowledge is stored as **Markdown files** in `knowledge/context7/`. The AI reads
 You: Learn this: python_tips|Use list comprehensions for faster code. [x*2 for x in range(10)]
 
 # Method 2: Add files manually
-echo "# Python Tips\n\nUse list comprehensions: [x*2 for x in range(10)]" > ~/aether-apple/knowledge/context7/python_tips.md
+echo "# Python Tips\n\nUse list comprehensions: [x*2 for x in range(10)]" > ~/aether-apple/knowledge/aethervault/python_tips.md
 
 # Method 3: Copy notes from Obsidian
-cp ~/Documents/obsidian/my_notes.md ~/aether-apple/knowledge/context7/
+cp ~/Documents/obsidian/my_notes.md ~/aether-apple/knowledge/aethervault/
 ```
 
 **Viewing the vault:**
 ```bash
-ls ~/aether-apple/knowledge/context7/
-cat ~/aether-apple/knowledge/context7/python_tips.md
+ls ~/aether-apple/knowledge/aethervault/
+cat ~/aether-apple/knowledge/aethervault/python_tips.md
 ```
 
 **Why this is powerful:**
@@ -272,7 +272,7 @@ A: Nothing. No subscriptions, no API keys, no hidden fees. The models are open s
 A: Any iPad from the last 8 years works. For the best experience, an M-series iPad Pro with iSH. But even an older iPad with a-Shell will run AI.
 
 **Q: Can I use the same knowledge vault across my Mac and iPad?**
-A: Yes! The Context7 vault is just Markdown files. Sync via iCloud Drive, Dropbox, or Obsidian Sync.
+A: Yes! The AetherVault vault is just Markdown files. Sync via iCloud Drive, Dropbox, or Obsidian Sync.
 
 **Q: Are the AI models censored?**
 A: No. These are raw, unfiltered models. You get the full experience.
@@ -290,7 +290,7 @@ A: Yes. The code is MIT licensed. Check each model's license on HuggingFace for 
 A: iSH emulates an x86 CPU on your ARM iPad. Building llama.cpp requires compiling C++ code, which is CPU-intensive. It takes ~20 minutes but works. Once built, inference is usable (just not fast).
 
 **Q: Can I share my knowledge vault with someone?**
-A: Absolutely. It's just Markdown files. Share the `knowledge/context7/` folder, or connect it to a shared Obsidian vault.
+A: Absolutely. It's just Markdown files. Share the `knowledge/aethervault/` folder, or connect it to a shared Obsidian vault.
 
 ---
 

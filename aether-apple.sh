@@ -324,13 +324,13 @@ tool_sys_info() {
 }
 
 tool_memory() {
-    echo "  🧠 Context7 Knowledge Vault"
-    if [ -d "$DIR/knowledge/context7" ]; then
-        local count=$(find "$DIR/knowledge/context7" -name "*.md" 2>/dev/null | wc -l)
+    echo "  🧠 AetherVault Knowledge Vault"
+    if [ -d "$DIR/knowledge/aethervault" ]; then
+        local count=$(find "$DIR/knowledge/aethervault" -name "*.md" 2>/dev/null | wc -l)
         echo "  Notes: $count"
         if [ "$count" -gt 0 ]; then
             echo "  Files:"
-            find "$DIR/knowledge/context7" -name "*.md" 2>/dev/null | head -10 | while read f; do
+            find "$DIR/knowledge/aethervault" -name "*.md" 2>/dev/null | head -10 | while read f; do
                 echo "    📄 $(basename "$f")"
             done
         fi
@@ -406,7 +406,7 @@ while true; do
         echo "   │  2) ⚡  TURBO (Python — Coder Model)      │"
     fi
     echo "   │  3) 🛠️  TOOLS (System Toolbox)            │"
-    echo "   │  4) 📖  KNOWLEDGE (View Context7 Vault)   │"
+    echo "   │  4) 📖  KNOWLEDGE (View AetherVault Vault)   │"
     echo "   │  5) ℹ️  PLATFORM INFO                    │"
     echo "   │  6) ❌  EXIT                               │"
     echo "   └────────────────────────────────────────────┘"
@@ -439,15 +439,15 @@ while true; do
         3) show_tools ;;
         4)
             echo ""
-            echo "  📂 Context7 Vault Contents:"
+            echo "  📂 AetherVault Vault Contents:"
             echo "  ─────────────────────────────"
-            if [ -d "$DIR/knowledge/context7" ] && [ "$(ls -A "$DIR/knowledge/context7" 2>/dev/null)" ]; then
-                find "$DIR/knowledge/context7" -name "*.md" | while read f; do
+            if [ -d "$DIR/knowledge/aethervault" ] && [ "$(ls -A "$DIR/knowledge/aethervault" 2>/dev/null)" ]; then
+                find "$DIR/knowledge/aethervault" -name "*.md" | while read f; do
                     echo "  📄 $(basename "$f")"
                 done
             else
                 echo "  Vault is empty. The AI learns during chat."
-                echo "  Manually add .md files to knowledge/context7/"
+                echo "  Manually add .md files to knowledge/aethervault/"
             fi
             echo ""
             read -p "  Press Enter to return..."

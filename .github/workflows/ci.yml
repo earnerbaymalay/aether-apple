@@ -1,0 +1,59 @@
+name: Aether Apple CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check critical files
+        run: |
+          REQUIRED="README.md USAGE.md LICENSE install-apple.sh CONTRIBUTING.md"
+          MISSING=0
+          for f in $REQUIRED; do
+            if [ ! -f "$f" ]; then
+              echo "✗ Missing: $f"
+              MISSING=$((MISSING+1))
+            fi
+          done
+          if [ $MISSING -gt 0 ]; then
+            echo "✗ $MISSING files missing"
+            exit 1
+          else
+            echo "✓ All critical files present"
+          fi
+
+      - name: Shell check scripts
+        run: |
+          FAILURES=0
+          for script in *.sh; do
+            if [ -f "$script" ]; then
+              bash -n "$script" 2>/dev/null
+              if [ $? -eq 0 ]; then
+                echo "  ✓ $script"
+              else
+                echo "  ✗ $script"
+                FAILURES=$((FAILURES+1))
+              fi
+            fi
+          done
+          if [ $FAILURES -gt 0 ]; then
+            exit 1
+          else
+            echo "✓ All scripts pass syntax check"
+          fi
+
+      - name: Check README has Sideload link
+        run: |
+          if grep -q "sideload" README.md; then
+            echo "✓ README contains Sideload link"
+          else
+            echo "✗ README missing Sideload link"
+            exit 1
+          fi

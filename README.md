@@ -3,13 +3,19 @@
 # 🌌 A E T H E R — A P P L E &nbsp; E D I T I O N
 ### *Free. Offline. Private. AI on Every Apple Device.*
 
-[![Status](https://img.shields.io/badge/Status-v2.0_Multi_Platform-50fa7b?style=for-the-badge)](https://github.com/earnerbaymalay/aether-apple)
+<p align="center">
+  <a href="https://earnerbaymalay.github.io/sideload/">
+    📲 <strong>Install on any device — phone, Mac, or iPad — from one place: Sideload Hub</strong>
+  </a>
+</p>
+
+[![Version](https://img.shields.io/badge/version-26.04-50fa7b?style=for-the-badge)](https://github.com/earnerbaymalay/aether/blob/main/VERSIONS.md)
 [![Engine](https://img.shields.io/badge/Engine-Llama.cpp_%7C_Python-81a1c1?style=for-the-badge&logo=c%2B%2B)](https://github.com/ggerganov/llama.cpp)
 [![Platform](https://img.shields.io/badge/Platform-macOS_%7C_iPad-4c566a?style=for-the-badge&logo=apple)](https://github.com/earnerbaymalay/aether-apple)
 [![License](https://img.shields.io/badge/License-MIT-f1fa8c?style=for-the-badge)](LICENSE)
 [![Privacy](https://img.shields.io/badge/Privacy-100%25_Local_Offline-bd93f9?style=for-the-badge)](#-why-does-this-exist)
 
-[**⚡ Quick Start**](#-get-started-in-60-seconds) · [**📖 Full Guide**](USAGE.md) · [**🤖 Android Version**](https://github.com/earnerbaymalay/aether)
+[**⚡ Quick Start**](#-get-started-in-60-seconds) · [**📖 Full Guide**](USAGE.md) · [**🗺️ Version History**](https://github.com/earnerbaymalay/aether/blob/main/VERSIONS.md) · [**🤖 Android Version**](https://github.com/earnerbaymalay/aether)
 
 </div>
 
@@ -50,7 +56,7 @@ Aether adapts to your device. Here's what each experience looks like:
 | **Speed** | ⚡⚡⚡ 15-50 t/s on Apple Silicon | ⚡ 3-8 t/s (x86 emulation) | ⚡⚡ 5-15 t/s if installed |
 | **Models** | 2 modes (CHAT / TURBO) | 2 modes (same models) | 2 modes (same models) |
 | **Toolbox** | 6 tools (macOS native) | 5 tools (no battery — sandboxed) | 5 tools (no battery — sandboxed) |
-| **Context7** | ✅ Persistent memory | ✅ Persistent memory | ✅ Persistent memory |
+| **AetherVault** | ✅ Persistent memory | ✅ Persistent memory | ✅ Persistent memory |
 | **Setup Time** | ~5 minutes | ~20 minutes (build time) | ~5 minutes |
 | **Get it from** | Terminal + Homebrew | [iSH on App Store](https://apps.apple.com/app/ish-shell/id1436902243) | [a-Shell on App Store](https://apps.apple.com/app/a-shell/id1473805438) |
 
@@ -116,7 +122,7 @@ cd aether-apple
    │  1) 🤖  CHAT  (Default Model)              │
    │  2) ⚡  TURBO (Smaller/Faster Model)       │
    │  3) 🛠️  TOOLS (System Toolbox)            │
-   │  4) 📖  KNOWLEDGE (View Context7 Vault)   │
+   │  4) 📖  KNOWLEDGE (View AetherVault Vault)   │
    │  5) ℹ️  PLATFORM INFO                    │
    │  6) ❌  EXIT                               │
    └────────────────────────────────────────────┘
@@ -142,9 +148,9 @@ cd aether-apple
 | 🧠 Knowledge Vault | ✅ | ✅ |
 | 🧹 Purge Memory | ✅ | ✅ |
 
-### Context7 Persistent Memory — Works Everywhere
+### AetherVault Persistent Memory — Works Everywhere
 
-Same as the Android version. Your AI's knowledge is stored as **plain Markdown files** in `knowledge/context7/`. This means:
+Same as the Android version. Your AI's knowledge is stored as **plain Markdown files** in `knowledge/aethervault/`. This means:
 
 - 📝 **iPad → Mac → Android → iPad** — your knowledge vault travels with you
 - 🔗 **Connect to Obsidian** on any device for visual knowledge graphs
@@ -179,7 +185,7 @@ aether-apple/
 │   ├── web_read.sh        ← URL content reader
 │   └── sys_info.sh        ← System info (platform-aware)
 ├── knowledge/
-│   └── context7/          ← Persistent AI memory (Markdown, cross-platform)
+│   └── aethervault/          ← Persistent AI memory (Markdown, cross-platform)
 ├── skills/                ← Drop-in AI behavior modules
 ├── scripts/               ← Platform-specific scripts
 └── models/                ← Downloaded .gguf files (gitignored)
