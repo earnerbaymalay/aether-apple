@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="160" viewBox="0 0 720 160">
+  <defs>
+    <linearGradient id="appleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="2" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="720" height="160" fill="#0d1117" rx="12"/>
+  <!-- Apple icon -->
+  <g transform="translate(100,80)" filter="url(#glow)">
+    <text x="0" y="10" text-anchor="middle" font-size="32">🍎</text>
+  </g>
+  <!-- Callouts -->
+  <text x="200" y="48" fill="#a855f7" font-family="monospace" font-size="12" font-weight="600">macOS (Homebrew) · ~5 min setup</text>
+  <text x="200" y="68" fill="#94a3b8" font-family="sans-serif" font-size="12">Apple Silicon · 15-50 tokens/sec · llama.cpp native</text>
+  <text x="200" y="98" fill="#58a6ff" font-family="monospace" font-size="12" font-weight="600">iPad via iSH · ~20 min compile</text>
+  <text x="200" y="118" fill="#94a3b8" font-family="sans-serif" font-size="12">x86 emulation · 3-8 tokens/sec · full feature set</text>
+  <text x="500" y="48" fill="#3fb950" font-family="monospace" font-size="12" font-weight="600">iPad via a-Shell · ~5 min setup</text>
+  <text x="500" y="68" fill="#94a3b8" font-family="sans-serif" font-size="12">pip install · 5-15 tokens/sec · fastest iPad path</text>
+  <text x="500" y="98" fill="#f0883e" font-family="monospace" font-size="12" font-weight="600">Persistent AetherVault</text>
+  <text x="500" y="118" fill="#94a3b8" font-family="sans-serif" font-size="12">Same Markdown knowledge base as Android</text>
+  <line x1="470" y1="30" x2="470" y2="135" stroke="#21262d" stroke-width="1"/>
+</svg>
